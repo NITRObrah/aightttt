@@ -10,14 +10,14 @@ document.querySelector('.reload-buttonaa').addEventListener('animationend', func
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DEBUG: Script is running...");
 
-    // List of official Helios URLs
+    // List of official Sight.w URLs
     const officialUrls = [
-        "https://helios-browser.vercel.app/",
-        "https://helios-blue.vercel.app/",
-        "https://helios-browser.rf.gd",
-        "https://helios-browser.w3spaces.com/",
-        "https://helios-browser.pages.dev/",
-        "https://helios-browser.ct.ws"
+        "https://sightw-browser.vercel.app/",
+        "https://sightw-blue.vercel.app/",
+        "https://sightw-browser.rf.gd",
+        "https://sightw-browser.w3spaces.com/",
+        "https://sightw-browser.pages.dev/",
+        "https://sightw-browser.ct.ws"
     ];
 
     function normalizeUrl(url) {
@@ -64,14 +64,16 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("DEBUG: Current Page URL:", pageUrl);
 
             // Set the verification message
+            // Set the verification message
             if (officialUrls.includes(pageUrl)) {
-                console.log("DEBUG: Official Helios URL detected.");
+                console.log("DEBUG: Official Sight.w URL detected.");
                 iconElement.classList.add("fa", "fa-circle-check", "sitechecker-secure");
-                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is a secure, official Helios Browser link.`;
+                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is a secure, official Sight.w Browser link.`;
             } else {
                 console.log("DEBUG: UNOFFICIAL URL detected!");
                 iconElement.classList.add("fa", "fa-triangle-exclamation", "sitechecker-warning");
-                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is not an official Helios Browser link. Use at your own risk, or find a list of official Helios Browser links <a href="https://github.com/dinguschan-owo/Helios/blob/main/README.md" target="_blank" class="sitechecker-link">here</a>.`;
+                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is not an official Sight.w Browser link. Use at your own risk.`;
+            }
             }
 
             console.log("DEBUG: Text updated inside Sitechecker box.");
@@ -109,7 +111,7 @@ function createCenterSitechecker() {
                     <i class="fa-solid fa-fish"></i>
                 </div>
                 <h2>Announcing NautilusOS!!</h2>
-                <p id="sitechecker-center-text">Hey there! dinguschan speaking! I'm excited to introduce the brand-new <strong>𝘕𝘢𝘶𝘵𝘪𝘭𝘶𝘴𝘖𝘚</strong> - a fully functional web operating system developed alongside x8rr and lanefiedler731-gif. Experience games, apps, themes, cloaking, settings, and 3 whole proxy browsers built right in (including Helios, if you'd ever wanna use it lol), all in your browser! Check it out now!</p>
+                <p id="sitechecker-center-text">Hey there! dinguschan speaking! I'm excited to introduce the brand-new <strong>𝘕𝘢𝘶𝘵𝘪𝘭𝘶𝘴𝘖𝘚</strong> - a fully functional web operating system developed alongside x8rr and lanefiedler731-gif. Experience games, apps, themes, cloaking, settings, and 3 whole proxy browsers built right in (including Sight.w, if you'd ever wanna use it lol), all in your browser! Check it out now!</p>
                 <div class="sitechecker-button-container">
                     <button class="sitechecker-close">Maybe later</button>
                     <button class="sitechecker-visit">Take me there!</button>
@@ -135,7 +137,7 @@ function createCenterSitechecker() {
             // Add visit button functionality
             const visitButton = centerSitecheckerContainer.querySelector(".sitechecker-visit");
             visitButton.addEventListener("click", function() {
-                window.open("https://github.com/nautilus-os/NautilusOS", "_blank");
+                window.open("javascript:void(0);", "_blank");
                 centerSitecheckerContainer.style.display = "none";
                 backdrop.style.display = "none";
                 // Show the original sitechecker after closing the popup
@@ -160,8 +162,8 @@ function createCenterSitechecker() {
 
 (function () {
     document.addEventListener("DOMContentLoaded", function () {
-        console.log("Logging: Helios started");
-        displayHeliosStarted();
+        console.log("Logging: Sight.w started");
+        displaySight.wStarted();
 
         document.body.addEventListener("click", function (event) {
             let target = event.target;
@@ -231,15 +233,15 @@ function createCenterSitechecker() {
         });
     });
 
-    function displayHeliosStarted() {
+    function displaySight.wStarted() {
         let logContainer = document.getElementById("logContainer");
 
         if (!logContainer) {
-            setTimeout(displayHeliosStarted, 100);
+            setTimeout(displaySight.wStarted, 100);
             return;
         }
 
-        addLogEntry(`[Helios Log] Helios started successfully`, true);
+        addLogEntry(`[Sight.w Log] Sight.w started successfully`, true);
     }
 
     let retryCount = 0;
@@ -253,7 +255,7 @@ function createCenterSitechecker() {
             return;
         }
 
-        addLogEntry(`[Helios Log] ${message}`);
+        addLogEntry(`[Sight.w Log] ${message}`);
     }
 
     function addLogEntry(message, isHeader = false) {
@@ -368,7 +370,7 @@ const uselessChars = [ 's', 'k', '-', 'o', 'r', '-', 'v', '1', '-', '8', 'e', 'f
   '6', '9', '0', '4', '4', '5', 'd', '1', '2', '3', '2', '1', '9', 'd', 'a', '3', 
   '6', '0', '0', '5', 'd', '5', '5', '6', 'c'];
 
-function getHeliosApiKey() {
+function getSight.wApiKey() {
   const filteredParts = HELIOS_API_KEY_PARTS.filter(part => part !== 'X' && uselessChars.includes(part));
   return filteredParts.join('');
 }
@@ -376,7 +378,7 @@ function getHeliosApiKey() {
 
 const heliosSystemMessage = {
   role: "system",
-  content: `You are Helios AI, an advanced AI assistant designed to be helpful, knowledgeable, and adaptable. You were made by dinguschan.`
+  content: `You are Sight.w AI, an advanced AI assistant designed to be helpful, knowledgeable, and adaptable. You were made by dinguschan.`
 };
 
 const chatbotToggler = document.querySelector(".wrench-buttonaa");
@@ -393,7 +395,7 @@ chatbotToggler.addEventListener("click", () => {
   );
 
   if (!existingWelcomeMessage) {
-    addHeliosMessage("Hi there! How may I assist you?", false);
+    addSight.wMessage("Hi there! How may I assist you?", false);
   }
 });
 
@@ -402,27 +404,27 @@ closeBtn.addEventListener("click", () => {
   document.body.classList.remove("show-chatbot");
 });
 
-sendChatBtn.addEventListener("click", sendHeliosMessage);
+sendChatBtn.addEventListener("click", sendSight.wMessage);
 
 chatInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    sendHeliosMessage();
+    sendSight.wMessage();
   }
 });
 
-async function sendHeliosMessage() {
+async function sendSight.wMessage() {
   const userMessage = chatInput.value.trim();
   if (!userMessage) return;
 
-  addHeliosMessage(userMessage, true);
+  addSight.wMessage(userMessage, true);
   chatInput.value = '';
 
   heliosMessageHistory.push({ role: "user", content: userMessage });
   const loadingElement = addLoadingMessage();
 
   try {
-    const response = await tryHeliosModels(userMessage);
+    const response = await trySight.wModels(userMessage);
     let formattedResponse = response.text;
 
     formattedResponse = formatBulletedList(formattedResponse);
@@ -431,14 +433,14 @@ async function sendHeliosMessage() {
     
     heliosMessageHistory.push({ role: "assistant", content: formattedResponse });
     loadingElement.remove();
-    addHeliosMessage(formattedResponse, false);
+    addSight.wMessage(formattedResponse, false);
   } catch (error) {
     loadingElement.remove();
-    addHeliosMessage(`Error: ${error.message}`, false);
+    addSight.wMessage(`Error: ${error.message}`, false);
   }
 }
 
-function addHeliosMessage(content, isUser) {
+function addSight.wMessage(content, isUser) {
   const messageElement = document.createElement("div");
   messageElement.classList.add("chat", isUser ? "outgoing" : "incoming");
 
@@ -473,7 +475,7 @@ function addLoadingMessage() {
   return loadingElement;
 }
 
-async function tryHeliosModels(userMessage) {
+async function trySight.wModels(userMessage) {
   const models = [
     { name: "google/gemini-2.0-flash-exp:free", free: true },
     { name: "google/gemini-flash-1.5-exp", free: true },
@@ -486,7 +488,7 @@ async function tryHeliosModels(userMessage) {
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${getHeliosApiKey()}`,
+          "Authorization": `Bearer ${getSight.wApiKey()}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -734,13 +736,13 @@ document.addEventListener('DOMContentLoaded', function() {
 ➥ 𝗱𝗮𝘁𝗮𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗼𝗿.𝗘𝘅𝗲𝗰𝘂𝘁𝗲𝗣𝗿𝗼𝗰𝗲𝘀𝘀.𝗙𝗮𝗶𝗹𝗲𝗱()
 
 𝗦𝘂𝗴𝗴𝗲𝘀𝘁𝗲𝗱 𝗔𝗰𝘁𝗶𝗼𝗻𝘀:
-• Visit [https://github.com/dinguschan-owo/Helios] and verify your browser is up to date.
+• Visit [javascript:void(0);] and verify your browser is up to date.
 • Ensure that the input data is correctly formatted and not null.
 • Scrub any injection attempts.
 • Review the initialization sequence for all dependent objects.
 • Check the logs for any preceding errors that may provide context.
 • Clear browser cache and clear and reset website data storage.
-• If all else fails, visit the above mentioned offical Github page [https://github.com/dinguschan-owo/Helios] and redownload the latest stable version (Helios v1.𝟽.0).
+• If all else fails, visit the above mentioned offical Github page [javascript:void(0);] and redownload the latest stable version (Sight.w v1.𝟽.0).
 `;
             document.body.appendChild(contentFetchingProtocolErrorOverlay);
         }
@@ -791,10 +793,10 @@ const tabs = [{
     url: 'helios://start',
     content: `<div class="Xt7Lm9Kp3R8f">
   <p>𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!</p>
-</div><div class="top-right-boxaa" title="Click here to visit the Helios GitHub page!">
-  <p><i class="fa-brands fa-github"></i></p>
+</div><div class="top-right-boxaa" title="Click here to visit the Sight.w GitHub page!">
+  <p> </p>
 </div>
-        <h23>Helios</h23>
+        <h23>Sight.w</h23>
         <h21>𝚟𝟷.𝟿.𝟶</h21>
         <div class="search-baraa">
           <div class="search-containeraa">
@@ -858,7 +860,7 @@ function attachClickListeners() {
 }
 
 function openGitHub() {
-    window.open('https://github.com/dinguschan-owo/Helios/', '_blank');
+    window.open('javascript:void(0);/', '_blank');
 }
 
 document.addEventListener('DOMContentLoaded', attachClickListeners);
@@ -921,10 +923,10 @@ function updateTabContent(url, content, tab) {
     if (url === 'helios://start') {
         content.innerHTML = `<div class="Xt7Lm9Kp3R8f">
   <p>𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!</p>
-</div><div class="top-right-boxaa" title="Click here to visit the Helios GitHub page!">
-  <p><i class="fa-brands fa-github"></i></p>
+</div><div class="top-right-boxaa" title="Click here to visit the Sight.w GitHub page!">
+  <p> </p>
 </div>
-        <h23>Helios</h23>
+        <h23>Sight.w</h23>
         <h21>𝚟𝟷.𝟿.𝟶</h21>
         <div class="search-baraa">
           <div class="search-containeraa">
@@ -966,7 +968,7 @@ function updateTabContent(url, content, tab) {
     } else if (url === 'helios://settings') {
         content.innerHTML = `
         <div class="sidebarvv">
-  <h1>Helios Settings</h1>
+  <h1>Sight.w Settings</h1>
 
 <button class="active" onclick="showCategory('historyvv')">History</button>
   <button onclick="showCategory('cloakingvv')">Cloaking</button>
@@ -981,7 +983,7 @@ function updateTabContent(url, content, tab) {
 </div>
 
 <div class="content-containervv" id="browserlogsvv">
-  <h3>Helios Browser Logs</h3>
+  <h3>Sight.w Browser Logs</h3>
   <div id="logContainer" style="max-height: 400px; overflow-y: auto; border: 3px solid #66ffa1; padding: 10px; background: #222; color: #fff; border-radius: 5px; width: 750px;"></div>
 </div>
 
@@ -992,7 +994,7 @@ function updateTabContent(url, content, tab) {
   <button onclick="openInBlob()">Open in blob:</button>
 </div>
 <div class="content-containervv" id="miscvv">
-  <h31>Customize Helios's Appearance</h31><div class="theme-preview-container">
+  <h31>Customize Sight.w's Appearance</h31><div class="theme-preview-container">
 <div class="theme-preview" onclick="activatePreview(this)">
   <div class="browser-simulation">
     <div class="browser-header">
@@ -1003,7 +1005,7 @@ function updateTabContent(url, content, tab) {
             <div class="barbarbar"></div>
 
     </div>
-    <div class="browser-content"><div class="hetitle">Helios</div><div class="titlelinee"></div><div class="dropmed"></div><div class="send4"></div></div>
+    <div class="browser-content"><div class="hetitle">Sight.w</div><div class="titlelinee"></div><div class="dropmed"></div><div class="send4"></div></div>
   </div>
   <p class="theme-name"><i>Default Dark</i> by 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗</p>
 </div>
@@ -1018,7 +1020,7 @@ function updateTabContent(url, content, tab) {
             <div class="barbarbar-lightmode"></div>
 
     </div>
-    <div class="browser-content-lightmode"><div class="hetitle-lightmode">Helios</div><div class="titlelinee-lightmode"></div><div class="dropmed-lightmode"></div><div class="send4-lightmode"></div></div>
+    <div class="browser-content-lightmode"><div class="hetitle-lightmode">Sight.w</div><div class="titlelinee-lightmode"></div><div class="dropmed-lightmode"></div><div class="send4-lightmode"></div></div>
   </div>
   <p class="theme-name-lightmode"><i>Dark Ember</i> by bromse</p>
 </div>
@@ -1026,7 +1028,7 @@ function updateTabContent(url, content, tab) {
 </div></div>
 
         `;
-        tab.querySelector('.tab-nameaa').textContent = 'Helios Settings';
+        tab.querySelector('.tab-nameaa').textContent = 'Sight.w Settings';
         tabs[currentTabIndex].content = content.innerHTML;
         tabs[currentTabIndex].url = url;
 
@@ -1444,17 +1446,17 @@ function modifyCss(cssText) {
 function updateSpecialDivs() {
     const checkURL = () => {
         const urlInput = document.querySelector('.browser-baraa .address-baraa input');
-        const isHeliosURL = urlInput && urlInput.value.startsWith('helios://');
+        const isSight.wURL = urlInput && urlInput.value.startsWith('helios://');
         const officialC = document.querySelector('.official-caa');
         const official = document.querySelector('.officialaa');
 
         if (officialC) {
-            officialC.style.opacity = isHeliosURL ? '1' : '0';
-            officialC.style.pointerEvents = isHeliosURL ? '' : 'none';
+            officialC.style.opacity = isSight.wURL ? '1' : '0';
+            officialC.style.pointerEvents = isSight.wURL ? '' : 'none';
         }
         if (official) {
-            official.style.opacity = isHeliosURL ? '1' : '0';
-            official.style.pointerEvents = isHeliosURL ? '' : 'none';
+            official.style.opacity = isSight.wURL ? '1' : '0';
+            official.style.pointerEvents = isSight.wURL ? '' : 'none';
         }
     };
 
@@ -1516,7 +1518,7 @@ function changeTabContent(url) {
         document.getElementById('url-baraa').dispatchEvent(event);
     }
 }
-// Function to open Helios in an about:blank tab
+// Function to open Sight.w in an about:blank tab
 
 function openInAboutBlank() {
     const newWindow = window.open('about:blank', '_blank');
@@ -1533,7 +1535,7 @@ function openInAboutBlank() {
 
     newWindow.document.close();
 }
-// Function to open Helios in a blob: tab
+// Function to open Sight.w in a blob: tab
 
 async function openInBlob() {
     // Clone the document's static DOM structure
@@ -1939,23 +1941,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function showUrlsList(content, tab) {
     content.innerHTML = `
-        <h2 style="font-size: 48px; margin-bottom: 20px; border-bottom: 3px solid #fff;">Helios Internal URLs</h2>
+        <h2 style="font-size: 48px; margin-bottom: 20px; border-bottom: 3px solid #fff;">Sight.w Internal URLs</h2>
         <ul style="list-style-type: none; padding: 0;">
             <li style="margin-bottom: 15px;">
                 <a href="javascript:void(0);" data-url="helios://start" class="custom-url-link" style="font-size: 24px; color: #66ffa1; text-decoration: none;">helios://start&nbsp;<i class="fa-solid fa-link" style="font-size: 18px; color: #66ffa1;"></i></a>
-                <p style="margin: 5px 0 0 0; color: #b3b3b3;">Helios start page</p>
+                <p style="margin: 5px 0 0 0; color: #b3b3b3;">Sight.w start page</p>
             </li>
             <li style="margin-bottom: 15px;">
                 <a href="javascript:void(0);" data-url="helios://settings" class="custom-url-link" style="font-size: 24px; color: #66ffa1; text-decoration: none;">helios://settings&nbsp;<i class="fa-solid fa-link" style="font-size: 18px; color: #66ffa1;"></i></a>
-                <p style="margin: 5px 0 0 0; color: #b3b3b3;">Helios settings page</p>
+                <p style="margin: 5px 0 0 0; color: #b3b3b3;">Sight.w settings page</p>
             </li>
             <li style="margin-bottom: 15px;">
                 <a href="javascript:void(0);" data-url="helios://urls" class="custom-url-link" style="font-size: 24px; color: #66ffa1; text-decoration: none;">helios://urls&nbsp;<i class="fa-solid fa-link" style="font-size: 18px; color: #66ffa1;"></i></a>
-                <p style="margin: 5px 0 0 0; color: #b3b3b3;">List of Helios internal URLs</p>
+                <p style="margin: 5px 0 0 0; color: #b3b3b3;">List of Sight.w internal URLs</p>
             </li>
         </ul>
     `;
-    tab.querySelector('.tab-nameaa').textContent = 'Helios URLs';
+    tab.querySelector('.tab-nameaa').textContent = 'Sight.w URLs';
 
     // Add click event listeners to the custom URL links
     content.querySelectorAll('.custom-url-link').forEach(link => {
@@ -1986,12 +1988,12 @@ function hideSpinner(tabElement) {
 
 function downloadPage() {
     // Attempt to fetch from GitHub first
-    const url = "https://raw.githubusercontent.com/dinguschan-owo/Helios/refs/heads/main/Offline-File/Helios-Offline.html";
+    const url = "Offline-File/Sight.w-Offline.html";
     fetch(url)
         .then(response => response.blob()).then(blob => {
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = "Helios-Offline.html";
+            a.download = "Sight.w-Offline.html";
             a.click();
         })
         .catch(error => {
@@ -2001,7 +2003,7 @@ function downloadPage() {
         });
 
     function fetchLocalFile() {
-        fetch('/Offline-File/Helios-Offline.html')
+        fetch('/Offline-File/Sight.w-Offline.html')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch from local server');
@@ -2022,7 +2024,7 @@ function downloadPage() {
 
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'Helios-Offline.html';
+        a.download = 'Sight.w-Offline.html';
         document.body.appendChild(a);
 
         a.click();
