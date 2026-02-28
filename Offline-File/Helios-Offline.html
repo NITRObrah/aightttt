@@ -1,7 +1,3 @@
---- Offline-File/Sight.w-Offline.html (原始)
-
-
-+++ Offline-File/Sight.w-Offline.html (修改后)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1166,8 +1162,8 @@ body.show-chatbot .chatbot {
 .chatbox .incoming-avatar i {
   margin-left: 0.8px;
   margin-top: 4.7px;
-  font-size: 20px;
-  color: #fff;
+  font-size: 20px; 
+  color: #fff; 
 }
 
 .chatbox .chat p {
@@ -1612,7 +1608,7 @@ body.show-chatbot .chatbot {
   color: #fff;
   border: 3px solid #66ffa1;
   font-family: Arial, sans-serif;
-
+  
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1712,7 +1708,7 @@ body.show-chatbot .chatbot {
   color: #fff;
   border: 3px solid #66ffa1;
   font-family: Arial, sans-serif;
-
+  
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -1939,7 +1935,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             console.log("DEBUG: Text updated inside Sitechecker box.");
-        }, 200);
+        }, 200); 
     }
 
 function fadeOutSitechecker() {
@@ -1950,20 +1946,20 @@ function fadeOutSitechecker() {
                 sitecheckerContainer.style.opacity = "0";
                 console.log("DEBUG: Sitechecker is fading out.");
             }
-        }, 20000);
+        }, 20000); 
     }
 
 function createCenterSitechecker() {
         // Check if center Sitechecker already exists
         let centerSitecheckerContainer = document.querySelector(".sitechecker-container-center");
         let backdrop = document.querySelector(".sitechecker-backdrop");
-
+        
         if (!centerSitecheckerContainer) {
             // Create backdrop
             backdrop = document.createElement("div");
             backdrop.classList.add("sitechecker-backdrop");
             document.body.appendChild(backdrop);
-
+            
             // Create center sitechecker
             centerSitecheckerContainer = document.createElement("div");
             centerSitecheckerContainer.classList.add("sitechecker-container-center");
@@ -2015,7 +2011,7 @@ function createCenterSitechecker() {
     document.addEventListener("click", function(event) {
         if (event.target.closest(".tabaa")) {
             setTimeout(() => {
-                createSitechecker();
+                createSitechecker(); 
             }, 100);
         }
     });
@@ -2029,7 +2025,7 @@ function createCenterSitechecker() {
 
         document.body.addEventListener("click", function (event) {
             let target = event.target;
-
+            
             if (!target) return;
 
             // Log button clicks
@@ -2146,9 +2142,9 @@ function createCenterSitechecker() {
 window.addEventListener('keydown', function(event) {
   if (event.ctrlKey && event.key === 'k') {
     event.preventDefault();  // Prevent default Ctrl+K action
-
+    
     const searchInput = document.querySelector('.search-baraa input');
-
+    
     if (searchInput) {
       searchInput.focus();
     }
@@ -2218,18 +2214,18 @@ window.onload = applySavedTheme;
 
 const heliosMessageHistory = [];
 const HELIOS_API_KEY_PARTS = [
-  's', 'k', '-', 'o', 'r', '-', 'v', '1', '-', '8', 'e', 'f', '6', '7', '3', 'c',
-  'a', '3', '4', 'g', 'h', 'i', 'j', 'l', 'm', 'n', '2', '2', '5', '2', '3', '3', '0', 'f', 'c', '2', 'd', '5', '4',
-  '2', 'c', '1', '7', '0', '9', 'e', '9', '3', '3', '1', 'e', '2', 'c', '7', 'd',
-  '6', '9', '0', '4', '4', '5', 'd', '1', '2', '3', '2', '1', '9', 'd', 'a', '3',
+  's', 'k', '-', 'o', 'r', '-', 'v', '1', '-', '8', 'e', 'f', '6', '7', '3', 'c', 
+  'a', '3', '4', 'g', 'h', 'i', 'j', 'l', 'm', 'n', '2', '2', '5', '2', '3', '3', '0', 'f', 'c', '2', 'd', '5', '4', 
+  '2', 'c', '1', '7', '0', '9', 'e', '9', '3', '3', '1', 'e', '2', 'c', '7', 'd', 
+  '6', '9', '0', '4', '4', '5', 'd', '1', '2', '3', '2', '1', '9', 'd', 'a', '3', 
   '6', '0', '0', '5', 'd', '5', '5', '6', 'c',
 'b', 'p', 'q', 't', 'u', 'w', 'x', 'y', 'z'
 ];
 
-const uselessChars = [ 's', 'k', '-', 'o', 'r', '-', 'v', '1', '-', '8', 'e', 'f', '6', '7', '3', 'c',
-  'a', '3', '4', '2', '2', '5', '2', '3', '3', '0', 'f', 'c', '2', 'd', '5', '4',
-  '2', 'c', '1', '7', '0', '9', 'e', '9', '3', '3', '1', 'e', '2', 'c', '7', 'd',
-  '6', '9', '0', '4', '4', '5', 'd', '1', '2', '3', '2', '1', '9', 'd', 'a', '3',
+const uselessChars = [ 's', 'k', '-', 'o', 'r', '-', 'v', '1', '-', '8', 'e', 'f', '6', '7', '3', 'c', 
+  'a', '3', '4', '2', '2', '5', '2', '3', '3', '0', 'f', 'c', '2', 'd', '5', '4', 
+  '2', 'c', '1', '7', '0', '9', 'e', '9', '3', '3', '1', 'e', '2', 'c', '7', 'd', 
+  '6', '9', '0', '4', '4', '5', 'd', '1', '2', '3', '2', '1', '9', 'd', 'a', '3', 
   '6', '0', '0', '5', 'd', '5', '5', '6', 'c'];
 
 function getHeliosApiKey() {
@@ -2290,9 +2286,9 @@ async function sendHeliosMessage() {
     let formattedResponse = response.text;
 
     formattedResponse = formatBulletedList(formattedResponse);
-
+    
     formattedResponse = convertToStyledBold(formattedResponse);
-
+    
     heliosMessageHistory.push({ role: "assistant", content: formattedResponse });
     loadingElement.remove();
     addHeliosMessage(formattedResponse, false);
@@ -2309,18 +2305,18 @@ function addHeliosMessage(content, isUser) {
   const messageContent = document.createElement("p");
   messageContent.textContent = content;
 
-  if (!isUser) {
+  if (!isUser) { 
     const messageAvatar = document.createElement("span");
     messageAvatar.classList.add("incoming-avatar");
 
     const icon = document.createElement("i");
-    icon.classList.add("fa-solid", "fa-robot");
+    icon.classList.add("fa-solid", "fa-robot"); 
 
-    messageAvatar.appendChild(icon);
-    messageElement.appendChild(messageAvatar);
+    messageAvatar.appendChild(icon); 
+    messageElement.appendChild(messageAvatar);  
   }
 
-  messageElement.appendChild(messageContent);
+  messageElement.appendChild(messageContent); 
   chatbox.appendChild(messageElement);
   messageElement.scrollIntoView({ behavior: 'smooth' });
 }
@@ -2379,8 +2375,8 @@ async function tryHeliosModels(userMessage) {
 }
 
 function formatBulletedList(text) {
-  const bulletPattern = /^(?:-|\*|\u2022)\s+/gm;
-
+  const bulletPattern = /^(?:-|\*|\u2022)\s+/gm; 
+  
   return text.replace(bulletPattern, '• ');
 }
 
@@ -2389,8 +2385,8 @@ function formatBulletedList(text) {
 function convertToStyledBold(text) {
   const normalToStyled = {
     '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒', '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗',
-    'a': '𝗮', 'b': '𝗯', 'c': '𝗰', 'd': '𝗱', 'e': '𝗲', 'f': '𝗳', 'g': '𝗴', 'h': '𝗵', 'i': '𝗶', 'j': '𝗷',
-    'k': '𝗸', 'l': '𝗹', 'm': '𝗺', 'n': '𝗻', 'o': '𝗼', 'p': '𝗽', 'q': '𝗾', 'r': '𝗿', 's': '𝘀', 't': '𝘁',
+    'a': '𝗮', 'b': '𝗯', 'c': '𝗰', 'd': '𝗱', 'e': '𝗲', 'f': '𝗳', 'g': '𝗴', 'h': '𝗵', 'i': '𝗶', 'j': '𝗷', 
+    'k': '𝗸', 'l': '𝗹', 'm': '𝗺', 'n': '𝗻', 'o': '𝗼', 'p': '𝗽', 'q': '𝗾', 'r': '𝗿', 's': '𝘀', 't': '𝘁', 
     'u': '𝘂', 'v': '𝘃', 'w': '𝘄', 'x': '𝘅', 'y': '𝘆', 'z': '𝘇',
     'A': '𝗔', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': '𝗘', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛', 'I': '𝗜', 'J': '𝗝',
     'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': '𝗢', 'P': '𝗣', 'Q': '𝗤', 'R': '𝗥', 'S': '𝗦', 'T': '𝗧',
@@ -2588,13 +2584,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻: An unexpected null reference was encountered during processing execution. This may indicate improper formatting of input data, malicious or malformed XML injection attempts, or a failure in the preceding validation checks.
 
-𝗦𝘁𝗮𝗰𝗸 𝗧𝗿𝗮𝗰𝗲:
+𝗦𝘁𝗮𝗰𝗸 𝗧𝗿𝗮𝗰𝗲:  
 1. mainApp.Startup()
 2. mainApp.Run()
 3. urlFetchRequested()
 ➥ urlFetchRequested.Approved()
-4. fetchedSiteProcessor.ParseInput()
-5. dataProcessor.ExecuteProcess()
+4. fetchedSiteProcessor.ParseInput()  
+5. dataProcessor.ExecuteProcess() 
 ➥ 𝗱𝗮𝘁𝗮𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗼𝗿.𝗘𝘅𝗲𝗰𝘂𝘁𝗲𝗣𝗿𝗼𝗰𝗲𝘀𝘀.𝗙𝗮𝗶𝗹𝗲𝗱()
 
 𝗦𝘂𝗴𝗴𝗲𝘀𝘁𝗲𝗱 𝗔𝗰𝘁𝗶𝗼𝗻𝘀:
@@ -2716,7 +2712,7 @@ document.querySelectorAll('.tabaa').forEach((tab, index) => {
 
 function attachClickListeners() {
     document.querySelectorAll('.top-right-boxaa').forEach(function(element) {
-        element.removeEventListener('click', openGitHub);
+        element.removeEventListener('click', openGitHub); 
         element.addEventListener('click', openGitHub);
     });
 }
@@ -3253,7 +3249,7 @@ async function fetchExternalContent(url, content, tabIndex) {
                 :host {
                     all: initial;
                 }
-                ${style.textContent}
+                ${style.textContent} 
             `;
         });
 
@@ -4051,7 +4047,7 @@ async function generateKey() {
         ["encrypt", "decrypt"]
     );
 }
-// Encrypts data with key
+// Encrypts data with key 
 
 async function encryptData(data, key) {
     const encodedData = new TextEncoder().encode(data);
@@ -4181,7 +4177,7 @@ function sanitizeHtmlText(htmlText) {
 
     // Rule 2: Replace remaining � with é
     htmlText = htmlText.replace(/\uFFFD/g, 'é');
-    console.log("After Rule 2 (replacing remaining � with é): ", htmlText);
+    console.log("After Rule 2 (replacing remaining � with é): ", htmlText); 
 
     // Rule 3: Translate the redirection notice
     htmlText = htmlText.replace(/Avertissement de redirection/g, 'Redirect Notice');
